@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from "layout/Home";
+import {Route, Routes} from "react-router-dom";
+import Devices from "layout/Devices";
+import SolarWeb from "layout/SolarWeb";
+import {BottomTray, SideMenu} from "components/Navigation";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+    return (
+        <div className="App">
+            <SideMenu/>
+            <div className={'main'}>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/devices' element={<Devices/>}/>
+                <Route path='/solar-web' element={<SolarWeb/>}/>
+            </Routes>
+            </div>
+            <BottomTray/>
+        </div>
+    );
 }
 
 export default App;

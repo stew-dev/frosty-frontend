@@ -11,3 +11,51 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  max-width: calc(100% - 240px);
+  margin-left: 240px;
+}
+
+.MuiBottomNavigation-root {
+  display: none;
+  position: fixed;
+  bottom: 0;
+}
+
+@media screen and (max-width: 580px) {
+
+  .main {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .MuiDrawer-root {
+    display: none;
+  }
+
+  .MuiBottomNavigation-root {
+    display: block;
+    width: 100%;
+  }
+}
+
+.card-text {
+  font-size: 1rem;
+  text-align: left;
+}
+
+.toolbar {
+  min-height: 48px!important;
+  border-bottom: 2px solid #e2001a;
+  background: #4b4b4d;
+}
+
+.card-actions {
+  padding: 0 16px 16px!important;
+}
